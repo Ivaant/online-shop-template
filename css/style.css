@@ -371,3 +371,43 @@ h1.zone {
 	width: 100%;
 	margin-right: auto;
 }
+
+/* ABOUT */
+#map {
+	float: right;
+	width: 35%;
+}
+
+.mapin {
+	position: relative;
+	padding-bottom: 75%; /* размеры фрейма высота 450 / ширина 600 = 75% */
+	height: 0;
+	overflow: hidden;
+}
+
+.mapin iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.about article {
+	width: 60%;
+	
+}
+
+.about h1 {
+	margin: 20px 0;
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.about p {
+	margin: 10px 0;
+	padding: 0 10px 0 0;
+	font-size: 1.2rem;
+	text-align: justify;
+	line-height: 1.5rem;
+}
