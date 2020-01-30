@@ -8,7 +8,9 @@
     <link
         href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400i,700|Roboto:100,300,300i,400,500,500i,900,900i&display=swap&subset=cyrillic"
         rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/unslider.css">
+    <link rel="stylesheet" href="./css/unslider-dots.css">
     <title>Frontpage</title>
 </head>
 
@@ -37,19 +39,72 @@
                 </ul>
             </nav>
             <form class="site-search" action="#">
-               <input type="image" src="./images/search-btn.jpg">
+                <input type="image" src="./images/search-btn.jpg">
                 <input type="search" placeholder="Search...">
             </form>
         </div>
 
     </header>
-    <div class="slider">
-        <ul>
-            <li>First slide</li>
-            <li>Second slide</li>
-            <li>Last slide</li>
-        </ul>
-    </div>
+    <section class="cover zone">
+        <div class="my-slider">
+            <ul>
+                <li>
+                    <h2>right is pink.<br>
+                        left is blue</h2>
+                    <p>Inspired by Brasil's bold colors and matching up to football's on-pitch<br>
+                        playmakers, these kicks are ready to stand out.</p>
+                    <img src="./images/slide1.jpg" alt="hero look">
+                </li>
+                <li>
+                    <h2>right is pink.<br>
+                        left is blue</h2>
+                    <p>Inspired by Brasil's bold colors and matching up to football's on-pitch<br>
+                        playmakers, these kicks are ready to stand out.</p>
+                    <img src="./images/slide1.jpg" alt="hero look">
+                </li>
+                <li>
+                    <h2>right is pink. <br>
+                        Left is blue</h2>
+                    <p>Inspired by Brasil's bold colors and matching up to football's on-pitch<br>
+                        playmakers, these kicks are ready to stand out.</p>
+                    <img src="./images/slide1.jpg" alt="hero look">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="blog-container zone">
+        <article class="blog-card">
+            <img src="./images/img31.jpg" alt="football shoes">
+            <h2><a href="#">Football shoes</a></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et blanditiis quaerat repellendus
+                ea soluta quo, error omnis repellat. Illum, ipsum architecto dolore ducimus ad nisi sit dolor sunt a.
+            </p>
+        </article>
+        <article class="blog-card">
+            <img src="./images/img32.jpg" alt="modern clothes">
+            <h2><a href="#">modern clothes</a></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et blanditiis quaerat repellendus
+                ea soluta quo, error omnis repellat. Illum, ipsum architecto dolore ducimus ad nisi sit dolor sunt a.
+            </p>
+        </article>
+        <article class="blog-card">
+            <img src="./images/img33.jpg" alt="bags and accessories">
+            <h2><a href="#">bags & accessories</a></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et blanditiis quaerat repellendus
+                ea soluta quo, error omnis repellat. Illum, ipsum architecto dolore ducimus ad nisi sit dolor sunt a.
+            </p>
+        </article>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/unslider-min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.my-slider').unslider({
+                autoplay: true,
+                arrows: false
+            });
+        });
+    </script>
 </body>
 
 </html>

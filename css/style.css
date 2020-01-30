@@ -1,0 +1,309 @@
+/* --------------- reset.css --------------- */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	/* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;
+	/* приводим все к одной базовой линии */
+	background: transparent;
+	/* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;
+	/* размер шрифта всем одинаковый */
+}
+
+a {
+	/* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	outline: none;
+	text-decoration: none;
+}
+
+table {
+	/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td, td img {
+	vertical-align: top;
+	/* возвращаем привычное вертикальное выравнивание */
+}
+
+input, select, button, textarea {
+	margin: 0;
+	/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%;
+	/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+
+input[type="text"], input[type="password"], textarea {
+	padding: 0;
+	/* убираем внутренние отступы для текстовых полей */
+}
+
+input[type="checkbox"] {
+	/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+nav ul {
+	list-style: none;
+}
+
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+
+html {
+	min-height: 100%;
+	/* всегда показываем вертикальную полосу прокрутки  */
+}
+
+body {
+	color: #444;
+	text-align: left;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	/* используем безопасные шрифтовые CSS стеки */
+	min-height: 100%;
+}
+
+a, a:visited {
+	/* порядок правил для ссылок имеет значение */
+	color: #e6618c;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #fdf208;
+	text-decoration: none;
+}
+
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+img {
+	max-width: 100%;
+}
+
+.clr {
+	clear: both;
+}
+
+.clearfix:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+/* --------------- /базовые настройки ---------*/
+
+.zone {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.flex {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.top {
+	justify-content: flex-end;
+	padding: 30px 10px 10px 0;
+}
+
+.top>.logo {
+	margin-right: auto;
+	padding: 0;
+	font-size: 1.5rem;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+}
+
+.top p {
+	padding: 0 20px;
+}
+
+.top p img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.top p a {
+	padding: 0 20px;
+	color: #444;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.top p a:hover {
+	color: #f45a40;
+}
+
+.bottom {
+	justify-content: flex-start;
+	padding: 5px 0;
+	border-top: 1px solid #eee;
+}
+
+.main-menu li {
+	padding: 10px 20px 10px 0;
+	text-transform: uppercase;
+}
+
+.main-menu li a {
+	color: #444;
+	text-decoration: none;
+}
+
+.main-menu li a:hover {
+	color: #f45a40;
+}
+
+.main-menu li a.active-menu {
+	color: #f45a40;
+}
+
+.site-search {
+	margin: 5px;
+}
+
+.site-search input[type=image] {
+	height: 16px;
+	padding-top: 4px;
+}
+
+.site-search input {
+	padding: 0;
+	border: none;
+}
+
+/* COVER */
+
+.cover {
+	margin-top: 120px;
+	border: 1px solid red;
+}
+
+.my-slider ul li {
+	position: relative;
+	color: #f45a40;
+}
+
+.my-slider ul li h2 {
+	position: absolute;
+	top: 250px;
+	left: 25px;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.my-slider ul li p {
+	position: absolute;
+	top: 400px;
+	left: 25px;
+	line-height: 1.5rem;
+}
+
+.my-slider ul li img {
+	width: 100%;
+}
+
+.unslider-nav {
+	position: relative;
+	max-width: 1200px;
+	top: -40px;
+}
+
+.unslider-nav ol li {
+	background-color: #111;
+}
+
+@media only screen and (max-width: 768px) {
+	.my-slider ul li h2 {
+		top: 50px;
+		left: 10px;
+		font-size: 3rem;
+	}
+	.my-slider ul li p {
+		top: 150px;
+		left: 10px;
+	}
+}
+
+/* BLOG */
+
+.blog-container {
+	margin: 10px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.blog-card {
+	flex-basis: 31%;
+}
+
+.blog-card img {
+	width: 100%;
+	object-fit: cover;
+	object-position: bottom;
+}
+
+.blog-card h2 {
+	margin: 10px 0;
+	margin-right: auto;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+.blog-card h2 a {
+	color: #f45a40;
+	text-decoration: none;
+}
+
+.blog-card h2 a:hover {
+	text-decoration: underline;
+}
