@@ -140,6 +140,8 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
+	background-color: #fff;
+	z-index: 10;
 }
 
 .flex {
@@ -222,7 +224,6 @@ header {
 
 .cover {
 	margin-top: 120px;
-	border: 1px solid red;
 }
 
 .my-slider ul li {
@@ -273,25 +274,25 @@ header {
 	}
 }
 
-/* BLOG */
+/* NEWS */
 
-.blog-container {
-	margin: 10px auto;
+.container {
+	margin: 10px auto 30px auto;
 	display: flex;
 	justify-content: space-between;
 }
 
-.blog-card {
+.card {
 	flex-basis: 31%;
 }
 
-.blog-card img {
+.card img {
 	width: 100%;
 	object-fit: cover;
 	object-position: bottom;
 }
 
-.blog-card h2 {
+.card h2 {
 	margin: 10px 0;
 	margin-right: auto;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -299,11 +300,74 @@ header {
 	text-transform: uppercase;
 }
 
-.blog-card h2 a {
+.card h2 a {
 	color: #f45a40;
 	text-decoration: none;
 }
 
-.blog-card h2 a:hover {
+.card h2 a:hover {
 	text-decoration: underline;
+}
+
+/* POPULAR PRODUCTS  */
+
+h1.zone {
+	margin: 20px auto;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.products .card {
+	flex-basis: 23%;
+	border: 1px solid #eee;
+}
+
+.card-content {
+	margin: 10px 25px;
+	padding: 10px 0 0 0;
+}
+
+.card-content h2 {
+	font-weight: 500;
+}
+
+.card-content h3 {
+	margin: 5px 0;
+	font-size: 1rem;
+	font-weight: 300;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.card-content p {
+	margin: 5px 0;
+	font-size: 0.8rem;
+	text-indent: 5px;
+
+}
+
+.product-price {
+	overflow: hidden;
+	margin: 20px 20px 10px;
+	border-top: solid 1px #eee;
+	padding-top: 10px;
+}
+
+.price {
+	float: left;
+	color: #f45a40;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.btn-add-basket {
+	float: right;
+	width: 20px;
+}
+
+.btn-add-basket a img {
+	width: 100%;
+	margin-right: auto;
 }

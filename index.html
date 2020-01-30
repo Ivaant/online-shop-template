@@ -72,27 +72,106 @@
             </ul>
         </div>
     </section>
-    <section class="blog-container zone">
-        <article class="blog-card">
+    <section class="news container zone">
+        <article class="card">
             <img src="./images/img31.jpg" alt="football shoes">
             <h2><a href="#">Football shoes</a></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et blanditiis quaerat repellendus
                 ea soluta quo, error omnis repellat. Illum, ipsum architecto dolore ducimus ad nisi sit dolor sunt a.
             </p>
         </article>
-        <article class="blog-card">
+        <article class="card">
             <img src="./images/img32.jpg" alt="modern clothes">
             <h2><a href="#">modern clothes</a></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et blanditiis quaerat repellendus
                 ea soluta quo, error omnis repellat. Illum, ipsum architecto dolore ducimus ad nisi sit dolor sunt a.
             </p>
         </article>
-        <article class="blog-card">
+        <article class="card">
             <img src="./images/img33.jpg" alt="bags and accessories">
             <h2><a href="#">bags & accessories</a></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et blanditiis quaerat repellendus
                 ea soluta quo, error omnis repellat. Illum, ipsum architecto dolore ducimus ad nisi sit dolor sunt a.
             </p>
+        </article>
+    </section>
+    <h1 class="zone">popular products</h1>
+    <section class="products container zone">
+        <article class="card">
+            <img src="./images/img41.jpg" alt="running tank top">
+            <div class="card-text">
+                <div class="card-content">
+                    <h2>Nike tailwind loose</h2>
+                    <h3>running tank top</h3>
+                    <p>The Nike Tailwind Loose Women's Running Tank Top is made with sweat-wicking fabric to help you
+                        stay
+                        fry and comfortable on your run.</p>
+                </div>
+                <p class="product-price">
+                    <span class="price">$25.99</span>
+                    <span class="btn-add-basket"><a href="#">
+                            <img src="./images/ico-plus.jpg" alt="add to basket">
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="./images/img42.jpg" alt="training tank top">
+            <div class="card-text">
+                <div class="card-content">
+                    <h2>Nike G87</h2>
+                    <h3>training tank top</h3>
+                    <p>The Nike G87 Women's Training Tank Top features soft sweat-wicking fabric and a regular fit for
+                        total comfprt during any workout.</p>
+                </div>
+                <p class="product-price">
+                    <span class="price">$50.99</span>
+                    <span class="btn-add-basket"><a href="#">
+                            <img src="./images/ico-plus.jpg" alt="add to basket">
+                        </a>
+                    </span>
+                </p>
+        </article>
+        <article class="card">
+            <img src="./images/img43.jpg" alt="sports top">
+            <div class="card-text">
+                <div class="card-content">
+                    <h2>Nike i-beam swoosh</h2>
+                    <h3>sports top</h3>
+                    <p>The Nike i-beam swoosh Women's Sports Top features built-in bra and mesh back panel for
+                        lightweight support and targeted breathability.</p>
+                </div>
+                <p class="product-price">
+                    <span class="price">$70.99</span>
+                    <span class="btn-add-basket"><a href="#">
+                            <img src="./images/ico-plus.jpg" alt="add to basket">
+                        </a>
+                    </span>
+                </p>
+            </div>
+
+        </article>
+        <article class="card">
+            <img src="./images/img44.jpg" alt="running top">
+            <div class="card-text">
+                <div class="card-content">
+                    <h2>Nike lux</h2>
+                    <h3>running top</h3>
+                    <p>The Nike Lux Women's Running Top is made with light-weight Dry-FIT fabric and features
+                        perforated back panel for comfort and enhanced breathability.</p>
+                    <p>The Nike Lux Women's Running Top is made with light-weight Dry-FIT fabric and features
+                        perforated back panel for comfort and enhanced breathability.</p>
+                </div>
+                <p class="product-price">
+                    <span class="price">$25.99</span>
+                    <span class="btn-add-basket"><a href="#">
+                            <img src="./images/ico-plus.jpg" alt="add to basket">
+                        </a>
+                    </span>
+                </p>
+            </div>
+
         </article>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -104,6 +183,19 @@
                 arrows: false
             });
         });
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>
+        function setEqualHeight(columns) {
+            var tallestcolumn = 0;
+            columns.each(function () {
+                currentHeight = $(this).height();
+                if (currentHeight > tallestcolumn) { tallestcolumn = currentHeight; }
+            });
+            columns.height(tallestcolumn);
+        }
+
+        $(document).ready(function () { setEqualHeight($(".card-content")); });
     </script>
 </body>
 
