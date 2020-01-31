@@ -277,7 +277,7 @@ header {
 /* NEWS */
 
 .container {
-	margin: 10px auto 30px auto;
+	margin: 10px auto;
 	display: flex;
 	justify-content: space-between;
 }
@@ -411,3 +411,39 @@ h1.zone {
 	text-align: justify;
 	line-height: 1.5rem;
 }
+
+/* SUBSCRIPTION */
+
+.zone-bottom {
+	padding: 30px 0;
+	color: #eee;
+	background-color: #f45a40;
+}
+
+.subscription {
+	max-width: 1200px;
+}
+
+.subscription h2 {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+.subscription form input[type="email"] {
+	border: none;
+	padding: 7px 20px;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+.subscription form input[type="submit"] {
+	margin-left: 20px;
+	border: none;
+	padding: 7px 20px;
+	color: #eee;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	background-color: #ee8674;
+	cursor: pointer;
+} 
+
