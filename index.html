@@ -16,7 +16,7 @@
 
 <body>
     <header class="zone">
-        <div class="top flex">
+        <div class="top container">
             <p class="logo">BIRUANG</p>
             <p><img src="./images/ico-phone.jpg" alt="phone logo">
                 +371 282 20 760
@@ -26,9 +26,9 @@
                 <a href="#">checkout</a>
             </p>
         </div>
-        <div class="bottom flex">
+        <div class="bottom container">
             <nav>
-                <ul class="main-menu flex">
+                <ul class="main-menu container">
                     <li><a class="active-menu" href="#">home</a></li>
                     <li><a href="#">men</a></li>
                     <li><a href="#">women</a></li>
@@ -198,8 +198,8 @@
 
         </article>
     </section>
-    <section class="zone-bottom">
-        <div class="subscription container">
+    <section class="zone-signup">
+        <div class="zone container">
             <h2><strong>sign up</strong> for exclusive sales and product news</h2>
             <form action="#">
                 <input type="email" placeholder="your email address">
@@ -207,6 +207,73 @@
             </form>
         </div>
     </section>
+    <footer>
+        <div class="footer zone container">
+            <article class="card">
+                <div class="card-content">
+                    <h2>our stores</h2>
+                    <p>Feel free to visit our stores or contact us.</p>
+                    <address>
+                        1401 South Grand Avenue<br>
+                        Los Angeles, CA 90015<br>
+                        (213) 748 24 11<br>
+                        <br>
+                        100 Fairview Drive<br>
+                        Franklin, VA 23851
+                    </address>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-content">
+                    <h2>blog posts</h2>
+                    <p><a href="#">Justin Bieber confirmed that he is gay.</a>
+                        <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <p><a href="#">New sexy sport clothes are here.</a>
+                        <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur incidunt voluptates ipsam
+                        fugit accusamus animi pariatur consequatur!</p>
+                    <p><a href="#">Summer sales are coming!</a>
+                        <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur incidunt voluptates ipsam
+                        fugit accusamus animi pariatur consequatur!</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-content">
+                    <h2>support</h2>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Payment</a></li>
+                        <li><a href="#">Refunds</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Private & Security</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                        <li><a href="#">Sizing</a></li>
+                        <li><a href="#">Ordering</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Find A Store</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Sign Up & Save</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-content">
+                    <h2>contact us</h2>
+                    <form action="#">
+                        <input type="email" placeholder="your e-mail">
+                        <textarea name="message" cols="28" rows="10" placeholder="your text"></textarea>
+                        <input type="submit" name="submit" value="send message">
+                    </form>
+                </div>
+            </article>
+        </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./js/unslider-min.js"></script>
     <script>
@@ -228,7 +295,7 @@
             columns.height(tallestcolumn);
         }
 
-        $(document).ready(function () { setEqualHeight($(".card-content")); });
+        $(document).ready(function () { setEqualHeight($("products .card-content")); });
     </script>
 </body>
 

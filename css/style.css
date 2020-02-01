@@ -130,6 +130,8 @@ img {
 
 /* --------------- /базовые настройки ---------*/
 
+/* NAVIGATION */
+
 .zone {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -144,17 +146,12 @@ header {
 	z-index: 10;
 }
 
-.flex {
-	display: flex;
-	flex-flow: row nowrap;
-}
-
 .top {
 	justify-content: flex-end;
 	padding: 30px 10px 10px 0;
 }
 
-.top>.logo {
+.logo {
 	margin-right: auto;
 	padding: 0;
 	font-size: 1.5rem;
@@ -220,10 +217,50 @@ header {
 	border: none;
 }
 
+@media only screen and (max-width: 700px) {
+	.bottom.container {
+		justify-content: flex-start;
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	.top.container {
+		justify-content: flex-end;
+	}
+
+	.top p a {
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.top.container {
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		padding: 10px 0;
+	}
+
+	.logo {
+		margin: 0;
+	}
+	.main-menu {
+		font-size: 1.2rem;
+	}
+	.main-menu.container {
+		justify-content: flex-start;
+	}
+
+	form.site-search {
+		display: inline-block;
+	}
+}
+
 /* COVER */
 
 .cover {
-	margin-top: 120px;
+	margin-top: 150px;
 }
 
 .my-slider ul li {
@@ -262,28 +299,60 @@ header {
 	background-color: #111;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
 	.my-slider ul li h2 {
-		top: 50px;
+		top: 100px;
 		left: 10px;
 		font-size: 3rem;
 	}
 	.my-slider ul li p {
-		top: 150px;
+		top: 200px;
 		left: 10px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.cover {
+		margin-top: 180px;
+	}
+	.my-slider ul li h2 {
+		top: 50px;
+		left: 10px;
+		font-size: 2rem;
+	}
+	.my-slider ul li p {
+		top: 120px;
+		left: 10px;
+		font-size: 0.7rem;
+		line-height: 1rem;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.cover {
+		margin-top: 220px;
+	}
+
+	.my-slider ul li h2 {
+		top: 20px;
+		font-size: 1.5rem;
+	}
+	.my-slider ul li p {
+		top: 75px;
 	}
 }
 
 /* NEWS */
 
 .container {
-	margin: 10px auto;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 }
 
 .card {
 	flex-basis: 31%;
+	margin: 10px 0;
 }
 
 .card img {
@@ -307,6 +376,15 @@ header {
 
 .card h2 a:hover {
 	text-decoration: underline;
+}
+
+@media only screen and (max-width: 475px) {
+	.news.container {
+		flex-wrap: wrap;
+	}
+	.news .card {
+		flex-basis: 100%;
+	}
 }
 
 /* POPULAR PRODUCTS  */
@@ -372,6 +450,22 @@ h1.zone {
 	margin-right: auto;
 }
 
+@media only screen and (max-width: 900px) {
+	.container {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.products .card {
+		flex-basis: 45%;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.products .card {
+		flex-basis: 100%;
+	}
+}
+
 /* ABOUT */
 #map {
 	float: right;
@@ -412,31 +506,42 @@ h1.zone {
 	line-height: 1.5rem;
 }
 
+@media only screen and (max-width: 700px) {
+	#map {
+		float: none;
+		width: 100%;
+	}
+
+	.about article {
+		width: 100%;
+		
+	}
+}
+
 /* SUBSCRIPTION */
 
-.zone-bottom {
+.zone-signup {
+	width: 100%;
+	margin: 0;
 	padding: 30px 0;
 	color: #eee;
 	background-color: #f45a40;
 }
 
-.subscription {
-	max-width: 1200px;
-}
-
-.subscription h2 {
+.zone-signup .zone h2 {
+	margin: 10px 0;
 	font-size: 1.5rem;
 	text-transform: uppercase;
 }
 
-.subscription form input[type="email"] {
+.zone-signup .zone form input[type="email"] {
 	border: none;
 	padding: 7px 20px;
 	font-size: 0.8rem;
 	text-transform: uppercase;
 }
 
-.subscription form input[type="submit"] {
+.zone-signup .zone form input[type="submit"] {
 	margin-left: 20px;
 	border: none;
 	padding: 7px 20px;
@@ -447,3 +552,110 @@ h1.zone {
 	cursor: pointer;
 } 
 
+/* FOOTER */
+
+footer {
+	margin: 0;
+	background-color: #444;
+	color: #eee;
+}
+
+.footer .card {
+	flex-basis: 23%;
+}
+
+
+.footer .card .card-content p {
+	margin: 15px 0;
+	color: #aaa;
+}
+
+.card-content address {
+	margin: 5px 0;
+	color: #aaa;
+	font-size: 0.8rem;
+	font-style: normal;
+}
+
+.card-content p a {
+	color: #eee;
+	text-decoration: none;
+}
+
+.card-content ul {
+	columns: 2 30px;
+}
+
+.card-content ul li {
+	list-style-type: none;
+}
+
+.card-content ul li a {
+	text-decoration: none;
+	color: #aaa;
+	font-size: 0.8rem;
+}
+
+.card-content ul li a:hover {
+	color: #eee;
+}
+
+.footer .card .card-content form input[type="email"] {
+	width: 100%;
+	margin: 10px 0;
+	border: none;
+	padding: 7px 20px;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+.footer .card .card-content form textarea {
+	width: 100%;
+	margin: 10px 0;
+	border: none;
+	padding: 7px 20px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+.footer .card .card-content form input[type="submit"] {
+	border: none;
+	padding: 7px 20px;
+	color: #eee;
+	background-color: #F45A40;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+	.footer.container {
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	.footer .card {
+		flex-basis: 45%;
+	}
+}
+
+@media only screen and (max-width: 470px) {
+	.footer.container {
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: flex-start;
+	}
+	.footer .card {
+		flex-basis: 95%;
+		margin: 0 2.5%;
+	}
+
+	.footer .card .card-content form input[type="email"] {
+		width: 80%;
+	}
+	
+	.footer .card .card-content form textarea {
+		width: 80%;
+	}
+}
